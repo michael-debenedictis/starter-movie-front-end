@@ -1,8 +1,13 @@
 require('dotenv').config()
+const result = dotenv.config()
+
+if (result.error) {
+  throw result.error
+}
+
+console.log(result.parsed)
 const API_BASE_URL =
   process.env.REACT_APP_API_BASE_URL
-// console.log(API_BASE_URL, process.env.REACT_APP_API_BASE_URL, process.env)
-console.log(process.env.NODE_ENV, process.env.development, process.env.NODE_ENV.development)
 /**
  * Defines the default headers for these functions to work with `json-server`
  */
