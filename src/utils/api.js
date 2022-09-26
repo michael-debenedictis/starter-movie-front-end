@@ -1,13 +1,6 @@
-require('dotenv').config()
-const result = dotenv.config()
-
-if (result.error) {
-  throw result.error
-}
-
-console.log(result.parsed)
 const API_BASE_URL =
   process.env.REACT_APP_API_BASE_URL
+
 /**
  * Defines the default headers for these functions to work with `json-server`
  */
