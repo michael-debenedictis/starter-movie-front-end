@@ -1,7 +1,6 @@
 const API_BASE_URL =
   process.env.REACT_APP_API_BASE_URL
-const url = new URL(`${API_BASE_URL}/movies?is_showing=true`);
-console.log(url)
+console.log(`${API_BASE_URL}/movies?is_showing=true`)
 /**
  * Defines the default headers for these functions to work with `json-server`
  */
