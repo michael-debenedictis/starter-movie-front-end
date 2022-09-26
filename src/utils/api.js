@@ -1,7 +1,7 @@
 require('dotenv').config()
 const API_BASE_URL =
   process.env.REACT_APP_API_BASE_URL
-console.log(`${API_BASE_URL}/movies?is_showing=true`)
+console.log(API_BASE_URL, process.env.REACT_APP_API_BASE_URL, process.env)
 /**
  * Defines the default headers for these functions to work with `json-server`
  */
