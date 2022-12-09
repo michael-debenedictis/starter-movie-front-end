@@ -17,6 +17,7 @@ function App() {
           <DetailedMoviesList />
         </Route>
         <Route exact path="/movies/:movieId">
+          hi
           <FullMovie />
         </Route>
         <Route exact path="/theaters">
