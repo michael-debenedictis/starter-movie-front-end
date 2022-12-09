@@ -1,5 +1,8 @@
 const API_BASE_URL =
   process.env.REACT_APP_API_BASE_URL
+  
+  
+console.log(API_BASE_URL)
 
 /**
  * Defines the default headers for these functions to work with `json-server`
@@ -23,6 +26,7 @@ headers.append("Content-Type", "application/json");
  *  If the response is not in the 200 - 399 range the promise is rejected.
  */
 async function fetchJson(url, options, onCancel) {
+  console.log(API_BASE_URL)
   try {
     const response = await fetch(url, options);
 
