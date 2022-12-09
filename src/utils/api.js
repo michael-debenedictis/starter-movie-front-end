@@ -1,5 +1,6 @@
 const API_BASE_URL =
-  process.env.REACT_APP_API_BASE_URL
+  process.env.REACT_APP_API_URL
+
   
   
 console.log(API_BASE_URL)
@@ -26,7 +27,6 @@ headers.append("Content-Type", "application/json");
  *  If the response is not in the 200 - 399 range the promise is rejected.
  */
 async function fetchJson(url, options, onCancel) {
-  console.log(API_BASE_URL)
   try {
     const response = await fetch(url, options);
 
@@ -73,7 +73,6 @@ function populateTheaters(signal) {
 export async function listMovies(signal) {
   const url = new URL(`${API_BASE_URL}/movies?is_showing=true`);
   const addReviews = populateReviews(signal);
-  console.log(API_BASE_URL);
   return await fetchJson(url, { headers, signal }, []).then((movies) =>
     Promise.all(movies.map(addReviews))
   );
