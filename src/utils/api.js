@@ -69,6 +69,7 @@ function populateTheaters(signal) {
 export async function listMovies(signal) {
   const url = new URL(`${API_BASE_URL}/movies?is_showing=true`);
   const addReviews = populateReviews(signal);
+  console.log(API_BASE_URL);
   return await fetchJson(url, { headers, signal }, []).then((movies) =>
     Promise.all(movies.map(addReviews))
   );
